@@ -1,0 +1,111 @@
+*
+  box-sizing: border-box 
+ 
+body 
+  margin: 0px
+  padding: 0px
+  font-size: 10px 
+  font-family: 'Roboto', sans-serif
+  font-weight: 400
+  color: #000
+.body 
+  max-width: 768px
+  margin: 0px auto
+.title 
+  font-size: 24px
+  line-height:  20px
+  font-weight: 400
+  color: #000
+  text-align: center
+  margin: 0px
+.header 
+  background-color: #C4C4C4
+  padding: 31px 0px 39px
+  margin-bottom: 10px
+.text__content 
+  font-size: 14px
+  line-height: 20px
+  margin: 0px
+  position: absolute
+  right: 15px
+  bottom: 15px
+  left: 15px
+.background
+  &--greey 
+    background-color: #E8EBED   
+  &--blue 
+    background-color: #90BCE8
+  &--yellow  
+    background-color: #FEBF26  
+  &--orange 
+    background-color: #FFAA87 
+  &--purple
+    background-color: #C7ABD4
+  &--red   
+    background-color: #F55E62
+.blog
+ 
+  &__content  
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    flex-wrap: wrap
+    &-item
+      min-height: 155px
+      position: relative
+      padding: 15px
+      width: calc(50% - 5px)
+      margin-bottom: 10px
+      &:nth-child(3)
+        width: 100%
+  &__wrapper 
+    display: flex
+    justify-content: flex-start
+    align-items: stretch
+    flex-wrap: nowrap
+    margin-bottom: 10px
+    &-item
+      position: relative
+      background-color: #A2A9B7
+      font-size: 18px
+      line-height: 26px
+      color: #fff
+      
+      &--right 
+        flex-basis: 50%
+        padding: 10px
+        & + .blog__wrapper-item--right
+          margin-top: 10px
+        & .text__content
+          right: 6px
+          bottom: 6px
+          left: 6px
+    &-big
+      text-align: center
+      padding: 19px 19px 0px 9px
+      max-height: 210px
+      overflow-y: auto
+      flex-basis: 66%
+      margin-right: 10px
+    &-right
+      flex-grow: 1
+      display: flex
+      flex-direction: column
+      align-items: stretch
+.notes
+  &__inner 
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    flex-wrap: wrap
+  &__item
+    position: relative
+    min-height: 155px
+    padding: 15px
+    width: calc(50% - 5px)
+    margin-bottom: 10px
+    &:nth-child(1)
+      width: 100%
+.footer 
+  background-color: #C4C4C4   
+  padding: 31px 0px  
