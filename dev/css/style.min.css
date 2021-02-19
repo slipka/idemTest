@@ -54,6 +54,25 @@ body {
 .background--red {
   background-color: #f55e62
 }
+.background--green {
+  background-color: #e3ebd3
+}
+.icon {
+  width: 61px;
+  height: 61px;
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  left: 50%;
+  margin-left: -30px;
+  background-color: #fff;
+  color: #f55e62;
+  font-size: 36px;
+  line-height: 61px;
+  text-align: center;
+  border-radius: 50%;
+  display: none
+}
 .blog__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -158,6 +177,95 @@ body {
 .notes__item:nth-child(1) {
   width: 100%
 }
+.user__wrapper {
+  display: none;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
+  margin-bottom: 10px
+}
+.user__right {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -ms-flex-preferred-size: calc(33% - 5px);
+  flex-basis: calc(33% - 5px);
+  margin-right: 10px
+}
+.user__right-text {
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  left: 15px
+}
+.user__right-image {
+  background-image: url(../img/image.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 10px;
+  cursor: pointer
+}
+.user__right-image:hover {
+  background-image: url(../img/image-blur.jpg)
+}
+.user__right-image:hover .user__right-text {
+  display: none
+}
+.user__right-image:hover .icon {
+  display: block
+}
+.user__right-item {
+  position: relative;
+  padding-top: 100%
+}
+.user__inner {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 10px 15px
+}
+.user__list {
+  margin: 0;
+  padding: 0;
+  list-style: none
+}
+.user__list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  border-bottom: 1px dashed #000;
+  font-size: 14px;
+  letter-spacing: .3px;
+  line-height: 19px;
+  color: #000;
+  position: relative
+}
+.user__list-item + .user__list-item {
+  margin-top: 30px
+}
+.user__list-title {
+  padding-right: 10px;
+  position: relative;
+  top: 5px;
+  background-color: #e3ebd3
+}
+.user__list-text {
+  text-align: right;
+  padding-left: 10px;
+  position: relative;
+  top: 5px;
+  background-color: #e3ebd3
+}
 .footer {
   background-color: #c4c4c4;
   padding: 31px 0
@@ -251,5 +359,10 @@ body {
     -webkit-box-ordinal-group: 4;
     -ms-flex-order: 3;
     order: 3
+  }
+  .user__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
   }
 }

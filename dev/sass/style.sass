@@ -43,8 +43,24 @@ body
     background-color: #C7ABD4
   &--red   
     background-color: #F55E62
+  &--green
+    background-color: #E3EBD3  
+.icon 
+  width: 61px
+  height: 61px
+  position: absolute
+  top: 50%
+  margin-top: -30px
+  left: 50%
+  margin-left: -30px
+  background-color: #fff 
+  color: #F55E62   
+  font-size: 36px
+  line-height: 61px
+  text-align: center
+  border-radius: 50%
+  display: none
 .blog
- 
   &__content  
     display: flex
     justify-content: space-between
@@ -106,6 +122,71 @@ body
     margin-bottom: 10px
     &:nth-child(1)
       width: 100%
+.user
+  &__wrapper 
+    display: none
+    justify-content: space-between
+    align-self: stretch
+    margin-bottom: 10px
+  &__right
+    flex-shrink: 0
+    flex-basis: calc(33% - 5px)
+    margin-right: 10px
+    &-text
+      color: #fff
+      font-size: 14px
+      position: absolute
+      right: 15px
+      bottom: 15px
+      left: 15px
+      
+    &-image 
+      background-image: url('../img/image.jpg')
+      background-repeat: no-repeat
+      background-size: contain  
+      margin-top: 10px
+      cursor: pointer
+      &:hover 
+
+        background-image: url('../img/image-blur.jpg')
+        & .user__right-text 
+          display: none
+        & .icon 
+          display: block
+    &-item
+      position: relative
+      padding-top: 100%
+  &__inner
+    flex-grow: 1  
+    padding: 10px 15px
+  &__list 
+    margin: 0px
+    padding: 0px
+    list-style: none
+    
+    &-item
+      display: flex
+      justify-content: space-between
+      align-items: flex-end    
+      border-bottom: 1px dashed #000
+      font-size: 14px
+      letter-spacing: 0.3px
+      line-height: 19px
+      color: #000
+      position: relative
+      & + .user__list-item
+        margin-top: 30px
+    &-title
+      padding-right: 10px 
+      position: relative
+      top: 5px   
+      background-color: #e3ebd3
+    &-text
+      text-align: right
+      padding-left: 10px  
+      position: relative
+      top: 5px   
+      background-color: #e3ebd3
 .footer 
   background-color: #C4C4C4   
   padding: 31px 0px  
@@ -156,3 +237,6 @@ body
       order: 1
     &:nth-child(5) 
       order: 3        
+  .user
+    &__wrapper
+      display: flex
