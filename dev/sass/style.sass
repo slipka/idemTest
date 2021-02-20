@@ -8,6 +8,12 @@ body
   font-family: 'Roboto', sans-serif
   font-weight: 400
   color: #000
+@font-face 
+  font-family: 'Proxima'
+  src: url(../fonts/Proxima-Bold.woff) format('woff')
+  src: url(../fonts/Proxima-Bold.woff2) format('woff2')
+  font-style: normal
+  font-weight: 700  
 .body 
   max-width: 768px
   margin: 0px auto
@@ -30,6 +36,28 @@ body
   right: 15px
   bottom: 15px
   left: 15px
+.button 
+  display: inline-block
+  text-decoration: none
+  text-align: center
+  box-shadow: 0px 4px 6px rgba(15, 84, 185, 0.3)
+  border-radius: 21px
+  font-family: "Proxima", sans-serif
+  font-weight: 700
+  color: #fff
+  font-size: 16px
+  line-height: 24px
+  letter-spacing: 0.1px
+  padding: 7px 30px
+  transition: all 0.3s ease
+  cursor: pointer
+  outline: none
+  &--blue
+    border: 1px solid #0F54B9
+    background-color: #0F54B9
+    &:hover 
+      background-color: #fff
+      color: #0F54B9
 .background
   &--greey 
     background-color: #E8EBED   
@@ -147,7 +175,7 @@ body
       margin-top: 10px
       cursor: pointer
       &:hover 
-
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
         background-image: url('../img/image-blur.jpg')
         & .user__right-text 
           display: none
@@ -190,6 +218,117 @@ body
 .footer 
   background-color: #C4C4C4   
   padding: 31px 0px  
+
+.dialog
+  &__inner 
+    margin-top: 46px
+  &__wrapper 
+    max-width: 651px
+    width: 100%
+    margin: 0px auto
+    background-color: #fff
+    box-shadow: 0px 20px 30px rgba(0,0,0,0.15)
+    background-image: url('../img/dialog-bg.jpg')
+    background-repeat: no-repeat  
+  &__body
+    max-height: 450px
+    overflow-x: auto
+  &__item
+    display: flex
+    justify-content: space-between 
+    align-items: flex-start
+    margin-bottom: 20px 
+  &__avatar
+    flex-basis: 80px
+    flex-shrink: 0
+    text-align: center
+  &__message
+    flex-grow: 1    
+  &__commit  
+    border-top: 1px solid #DBDBDB
+    padding: 20px
+    padding-bottom: 30px
+.avatar 
+  display: inline-block
+  &__image 
+    display: block
+    max-width: 100%
+    margin: 0px auto
+    clip-path: url(#clipping)
+    position: relative
+    -webkit-transform: translateZ(1px)
+.form
+  &__text 
+    background-color: #fff
+    border-radius: 4px
+    border: 1px solid #DBDBDB
+    padding: 10px
+    resize: none
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px
+    line-height: 19px
+    color: #696969
+    outline: none
+    min-height: 129px
+    max-width: 590px
+    width: 100%
+    margin-bottom: 18px
+    &:focus 
+      box-shadow: 0px 0px 2px 0px #000
+.message 
+  margin: 0px   
+  padding: 13px 15px 9px
+  background-color: #F1F3F5  
+  border-radius: 5px   
+  font-size: 14px
+  line-height: 24px
+  color: #000
+  position: relative
+  display: inline-block
+  &::after 
+    content: ""
+    width: 0px
+    height: 0px
+    border-top: 10px solid #F1F3F5
+    border-right: 10px solid transparent
+    border-left: 10px solid transparent
+    position: absolute
+    top: 7px
+  &--left
+    float: left
+    &::after 
+      left: -8px  
+  &--right 
+    float: right
+    &::after
+      right: -8px
+.data 
+  position: relative
+  text-align: center
+  overflow: hidden
+  margin-bottom: 16px
+  &__text
+    font-size: 14px
+    line-height: 24px
+    font-weight: 400
+    color: #000
+    padding: 0px 27px 0px 14px
+    display: inline-block
+    position: relative
+    margin: 0px
+    &::after,
+    &::before
+      content: ""
+      height: 1px 
+      background-color: #DBDBDB
+      position: absolute
+      top: 50%
+      width: 1000px
+    &::after 
+      left: 100%
+    &::before
+      right: 100%    
+
 
 @media screen and (min-width: 480px)  
   .main 
@@ -240,3 +379,28 @@ body
   .user
     &__wrapper
       display: flex
+@media screen and (max-width: 680px)       
+  .dialog__inner 
+    padding: 0px 10px
+@media screen and (max-width: 540px)
+  .dialog
+    &__item 
+      flex-direction: column
+    &__avatar        
+      flex-basis: auto
+    &__message
+      padding: 0px 20px
+  .avatar 
+    padding: 10px 20px
+  .message
+    &--right::after
+      top: 100%
+      right: 11px
+    &--left::after
+      top: -9px 
+      border-bottom: 10px solid #f1f3f5 
+      border-top: none
+      left: 10px
+  .dialog__item--outgoing
+    align-items: flex-end      
+      
